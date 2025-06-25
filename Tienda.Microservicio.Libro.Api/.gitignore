@@ -1,0 +1,25 @@
+﻿# .gitignore para proyectos .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+*.db
+*.DS_Store
+*.log
+*.pdb
+*.cache
+*.ide
+*.sln.ide
+*.swp
+*.tmp
+*.bak
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.vscode/
+secrets.json
+appsettings.Development.json
