@@ -12,7 +12,7 @@ using Tienda.Microservicio.Libro.Api.Persistencia;
 namespace Tienda.Microservicio.Libro.Api.Migrations
 {
     [DbContext(typeof(ContextoAutor))]
-    [Migration("20250625054717_db_v1")]
+    [Migration("20250625220111_db_v1")]
     partial class db_v1
     {
         /// <inheritdoc />

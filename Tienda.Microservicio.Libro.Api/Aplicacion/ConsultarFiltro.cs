@@ -29,7 +29,7 @@ namespace Tienda.Microservicio.Libro.Api.Aplicacion
                 var autor = await _contexto.AutorLibros
                     .Where(p =>
                     (string.IsNullOrEmpty(request.AutorGuid) || p.AutorLibroGuid == request.AutorGuid) &&
-                    (string.IsNullOrEmpty(request.AutorGuid) || p.Nombre == request.Nombre)
+                    (string.IsNullOrEmpty(request.Nombre) || p.Nombre.ToLower() == request.Nombre.ToLower())
                     ).FirstOrDefaultAsync(cancellationToken);
 
                 if (autor == null)

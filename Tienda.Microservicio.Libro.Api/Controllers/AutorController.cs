@@ -34,5 +34,10 @@ namespace Tienda.Microservicio.Libro.Api.Controllers
         {
             return await _mediator.Send(new ConsultarFiltro.AutorUnico { AutorGuid = id });
         }
+        [HttpGet("nombre")]
+        public async Task<ActionResult<AutorDto>> GetAutorLibroPorNombre(string nombre)
+        {
+            return await _mediator.Send(new ConsultarFiltro.AutorUnico { Nombre = nombre });
+        }
     }
 }
