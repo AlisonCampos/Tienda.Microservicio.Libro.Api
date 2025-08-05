@@ -11,12 +11,11 @@ namespace Tienda.Microservicio.Libro.Api.extensions
         {
             // Controladores + Validaciones
             services.AddControllers()
-                .AddFluentValidation(cfg =>
-                    cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>());
+                .AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>());
 
             services.AddDbContext<ContextoAutor>(options =>
             {
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+                options.UseMySQL(configuration.GetConnectionString("DefaultConnection"));
             });
 
             services.AddMediatR(typeof(Nuevo.Manejador).Assembly);

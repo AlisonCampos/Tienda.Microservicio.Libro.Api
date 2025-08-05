@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,8 +8,9 @@ using Tienda.Microservicio.Libro.Api.Aplicacion;
 
 namespace Tienda.Microservicio.Libro.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
+    [Route("api/[controller]")]
     public class AutorController : ControllerBase
     {
         private readonly IMediator _mediator;
